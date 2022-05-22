@@ -1,6 +1,7 @@
 import mainpage from './mainpage.js';
 import menupage from './menupage.js';
 import contactpage from './contact.js';
+import './style.css';
 
 const content = document.getElementById('content');
 const header= document.createElement('header');
