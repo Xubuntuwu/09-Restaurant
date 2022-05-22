@@ -22,58 +22,60 @@ content.appendChild(header);
 
 //select the correct page
 let currentpage= 'main';
-function currentpagef(){
-switch(currentpage){
-    case 'main':
-        if(document.getElementById('centerdiv')!==null){
-            centerdiv=document.getElementById('centerdiv');
-            centerdiv.remove();
-        }
-        mainpage();
-        break;
-    case 'menu':
-        if(document.getElementById('centerdiv')!==null){
-            centerdiv=document.getElementById('centerdiv');
-            centerdiv.remove();
-        }
-        menupage();
-        break;
-    case 'contact':
-        if(document.getElementById('centerdiv')!==null){
-            centerdiv=document.getElementById('centerdiv');
-            centerdiv.remove();
-        }
-        contactpage();
-        break;
-    default:
-        console.log('Switch case error!!');
-}
-}
+// function currentpagef(){
+//     switch(currentpage){
+//         case 'main':
+//             if(document.getElementById('centerdiv')!==null){
+//                 centerdiv=document.getElementById('centerdiv');
+//                 centerdiv.remove();
+//             }
+//             mainpage();
+//             break;
+//         case 'menu':
+//             if(document.getElementById('centerdiv')!==null){
+//                 centerdiv=document.getElementById('centerdiv');
+//                 centerdiv.remove();
+//             }
+//             menupage();
+//             break;
+//         case 'contact':
+//             if(document.getElementById('centerdiv')!==null){
+//                 centerdiv=document.getElementById('centerdiv');
+//                 centerdiv.remove();
+//             }
+//             contactpage();
+//             break;
+//         default:
+//             console.log('Switch case error!!');
+//     }
+// }
 
 function removeOld(){
     if(document.getElementById('centerdiv')!==null){
-        centerdiv=document.getElementById('centerdiv');
+        const centerdiv=document.getElementById('centerdiv');
         centerdiv.remove();
     }
 }
 
-currentpagef();
+// currentpagef();
 
 buttonmain.addEventListener('click', ()=>{
     removeOld()
     currentpage='main'
     mainpage();
-    currentpagef();
+    // currentpagef();
 });
 buttonmenu.addEventListener('click', ()=>{
     removeOld()
     currentpage='menu'
     menupage();
-    currentpagef();
+    // currentpagef();
 });
 buttoncontact.addEventListener('click', ()=>{
     removeOld()
     currentpage='contact'
-    menupage();
-    currentpagef();
+    contactpage();
+    // currentpagef();
 });
+
+mainpage();

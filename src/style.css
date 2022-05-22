@@ -127,7 +127,7 @@ button:hover{
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 20px;
 }
 
@@ -183,6 +183,7 @@ button:hover{
 .foodpic2{
     grid-area: fp2;
     width: 100%;
+    height: fit-content;
 }
 
 #breakfastdiv img, #lunchdiv img, #dinnerdiv img{
@@ -247,8 +248,8 @@ button:hover{
         grid-template-areas: 
         "fn fn fn fn fn . fp fp"
         "fd fd fd fd fd fd fp fp"
-        "fd fd fd fd fd fd fp fp"
-        "fc fc fc fc fc . fp fp";
+        "fd fd fd fd fd fd fp2 fp2"
+        "fc fc fc fc fc . fp2 fp2";
     }
 }
 @media only screen and (max-width: 800px){
@@ -259,7 +260,7 @@ button:hover{
         width: 90%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 20px;
     }
 
@@ -280,7 +281,7 @@ button:hover{
         width: 98%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         gap: 20px;
     }
     .dish{
