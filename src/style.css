@@ -1,0 +1,329 @@
+:root{
+    --darkest-color : "#012E40"; 
+    --mid-dark-color: "#0378A6";
+    --medium-color: "#049DBF";
+    --mid-light-color: "#04C4D9";
+    --lighest-color:"#05F2F2";
+
+}
+
+html, body {
+    /* height: 100%; */
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+#content{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(../images/cristian-palmer-XexawgzYOBc-unsplash.jpg);
+    background-repeat:repeat-y;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(4, 157, 191, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+button{
+    aspect-ratio: 3;
+    border-radius: 25px;
+    height: 70%;
+    font-weight: bolder;
+    font-size: larger;
+    border-style: outset;
+    background-color: #05F2F2;
+    text-decoration: none;
+
+}
+button a{
+    text-decoration: none;
+    color: #012E40;
+}
+
+button:hover{
+    border-style:inset;
+    background-color: #71e0e0;
+    cursor: pointer;
+}
+
+#centerdiv{
+    min-height: 85vh;
+    width: 50%;
+    background-color: rgba(4, 196, 217,1);
+    color: #012E40;
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+.bubble{
+    border: double #0378A6 10px;
+    background-color: hsl(180, 52%, 75%);
+    border-radius: 50%;
+    margin: 20px;
+    padding: 10px;
+    width: 60%;
+    font-weight: bold;
+    aspect-ratio: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#coastal_town{
+    height: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+#sushi{
+    height: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid darkblue;
+}
+
+#praise{
+    aspect-ratio: 1;
+}
+
+.text{
+    font-size: normal;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* menu page */
+#menu{
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+#breakfastdiv, #lunchdiv, #dinnerdiv, #drinksdiv{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.drinks{
+    background-color: rgb(204, 229, 252);
+    border: solid 3px darkblue;
+    border-radius: 10px;
+    width: 100%;
+    line-height: 2rem;
+}
+.drinks li{
+    display: grid;
+    grid-template-columns: 10% 50%;
+    font-style: italic;
+}
+.drinkprice{
+    font-weight: bold;
+}
+
+.dish{
+    background-color: rgb(204, 229, 252);
+    border: solid 3px darkblue;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 6vh);
+    grid-template-areas: 
+    "fn fn fn fn fn . fp fp"
+    "fd fd fd fd fd . fp fp"
+    "fd fd fd fd fd . fp2 fp2"
+    "fc fc fc fc fc . fp2 fp2";
+    padding: 10px;
+}
+.foodname{
+    grid-area: fn;
+}
+
+.fooddescript{
+    grid-area: fd;
+    font-size: large;
+}
+
+.foodprice{
+    grid-area: fc;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.foodpic{
+    grid-area: fp;
+    width: 100%;
+}
+.foodpic2{
+    grid-area: fp2;
+    width: 100%;
+}
+
+#breakfastdiv img, #lunchdiv img, #dinnerdiv img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* contact */
+.contactbetty{
+    background-color: rgb(204, 229, 252);
+    border: solid 3px darkblue;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.contactbetty p{
+    font-weight: bold;
+}
+
+.contactbetty img{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 50%;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 1500px){
+    #centerdiv{
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 1300px){
+    #centerdiv{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    #centerdiv{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    #centerdiv{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 900px){
+    #centerdiv{
+        width: 100%;
+    }
+    .dish{
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, 6vh);
+        grid-template-areas: 
+        "fn fn fn fn fn . fp fp"
+        "fd fd fd fd fd fd fp fp"
+        "fd fd fd fd fd fd fp fp"
+        "fc fc fc fc fc . fp fp";
+    }
+}
+@media only screen and (max-width: 800px){
+    .bubble{
+        width: 70%;
+    }
+    #breakfastdiv, #lunchdiv, #dinnerdiv, #drinksdiv{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
+@media only screen and (max-width: 700px){
+    .bubble{
+        width: 80%;
+    }
+    .drinks li{
+        display: grid;
+        grid-template-columns: 20% 90%;
+        font-style: italic;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    #breakfastdiv, #lunchdiv, #dinnerdiv, #drinksdiv{
+        width: 98%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .dish{
+        grid-template-rows: repeat(4,7vh);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .bubble{
+        width: 91%;
+    }
+    #sushi{
+        height: 50px;
+    }
+    #coastal_town{
+        height: 150px;
+    }
+    .drinks li{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        font-style: italic;
+    }
+}
+@media only screen and (max-width: 450px){
+    .bubble{
+        width: 90%;
+    }
+    #sushi{
+        display: none;
+    }
+    #coastal_town{
+        height: 150px;
+    }
+    .dish{
+        grid-template-rows: repeat(4,9vh);
+    }
+}
+@media only screen and (max-width: 350px){
+    .dish{
+        grid-template-rows: repeat(3,13vh);
+        grid-template-areas: 
+        "fn fn fn fn fn . fp fp"
+        "fd fd fd fd fd fd . fc"
+        "fd fd fd fd fd fd . fc";
+    }
+}
