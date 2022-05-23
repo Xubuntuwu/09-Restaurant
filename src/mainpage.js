@@ -1,4 +1,6 @@
 export default mainpage;
+import sushii from "../images/sushi-svgrepo-com.svg";
+import coastali from '../images/noah-mayer-BWSDI-6YLW4-unsplash.jpg';
 
 //background
 function mainpage(){
@@ -23,7 +25,7 @@ function mainpage(){
         praise_text.textContent="Aunt Betty's C-Food Dishes is here to serve you the most delicious sea food meals for breakfast, lunch, and dinner! Aunt Betty serves the most mouth watering dishes. She can cook you anything, from sushi to King Crab. Tell a friend or better yet bring them with you! If you have no friends, just scooch onto our stranger-danger dining table where you'll meet others like you! Sharing the fun of fishing turns strangers into friends in a few hours!";
         praise.appendChild(praise_text);
         let sushi = document.createElement('img');
-        sushi.src="../images/sushi-svgrepo-com.svg";
+        sushi.src=sushii;
         sushi.alt="sushi svg";
         sushi.setAttribute('id', 'sushi');
         praise.appendChild(sushi);
@@ -48,7 +50,7 @@ function mainpage(){
         location_title.textContent="Location";
         const location_text = document.createElement('p');
         location_text.classList.add('text');
-        location_text.innerHTML=" 1234 Eldham Cove, at The Ethereal Water Shores</br> <img src='../images/noah-mayer-BWSDI-6YLW4-unsplash.jpg' alt='coastal town' id='coastal_town'>";
+        location_text.innerHTML=`234 Eldham Cove, at The Ethereal Water Shores</br> <img src=${coastali} alt='coastal town' id='coastal_town'>`;
         centerdiv.appendChild(location);
         location.appendChild(location_title);
         location.appendChild(location_text);
